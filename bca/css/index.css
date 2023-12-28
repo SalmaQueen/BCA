@@ -1,0 +1,90 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* background-color: red; */
+    scroll-behavior:smooth;
+    overflow-x: hidden;
+    /* background: linear-gradient(to bottom, #000428, #004683); */
+    /* animation: background-color 20s; */
+
+
+}
+
+section{
+    margin:0 10% 0 10% ;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+   
+}
+
+nav{
+  background-color: #eeeeec;
+  /* margin-bottom: 20px; */
+position: sticky;
+}
+
+.goals{
+  background-color: rgba(0, 30, 255, 0.381);
+  width: 80%;
+  height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 2%;
+}
+
+.apple{
+  display: flex;
+  align-items: center;
+  gap:20px;
+  /* border: 2px solid rgb(29, 27, 27); */
+  
+}
+.apple img{
+  width: 200px;
+}
+
+.one, .two, .three{
+  position: relative;
+  animation: animate 3s;
+  animation-duration: 5s;
+}
+@keyframes animate{
+  0% {
+		transform: perspective(200px) rotateY(0);
+		animation-timing-function: ease-out;
+	}
+	40% {
+		transform: perspective(200px) translateZ(150px) rotateY(170deg);
+		animation-timing-function: ease-out;
+	}
+	50% {
+		transform: perspective(200px) translateZ(150px) rotateY(190deg) scale(1);
+		animation-timing-function: ease-in;
+	}
+	80% {
+		transform: perspective(200px) rotateY(360deg) scale(.95);
+		animation-timing-function: ease-in;
+	}
+	100% {
+		transform: perspective(200px) scale(1);
+		animation-timing-function: ease-in;
+	}
+}
+
+.click-me{
+  position: absolute;
+  left: 40%;
+  top:14%;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #FAB51A;
+
+}
+.click-me:hover{
+  transform: scale(1.1);
+}
